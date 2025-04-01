@@ -58,7 +58,7 @@
                         <input type="datetime-local" class="form-control" id="data" name="data" required>
                     </div>
 
-                    <button class="btn btn-danger mt-4 w-100">Finalizar Compra</button>
+                    <button class="btn btn-danger mt-4 w-100" id="finalizar-compra" disabled>Finalizar Compra</button>
                 </div>
             </div>
         </div>
@@ -82,6 +82,22 @@
     <!-- Chamada para carregar os itens do carrinho assim que a página carregar -->
     <script>
         window.onload = carregarCarrinho;
+
+        // Função para exibir a mensagem de compra efetivada ao clicar no botão
+        document.getElementById('finalizar-compra').addEventListener('click', function () {
+            alert('Compra efetivada com sucesso!');
+            // Limpa o carrinho após a compra
+            localStorage.removeItem('carrinho');
+            carregarCarrinho(); // Recarrega o carrinho para mostrar que está vazio
+            document.getElementById('data').value = '';
+            document.getElementById('servico').value = 'retirada';
+        });
+
+        // Adicionar um evento 'input' para monitorar o campo de data e habilitar/desabilitar o botão
+        document.getElementById('data').addEventListener('input', function () {
+            habilitarVenda(); 
+        });
+
     </script>
 </body>
 
