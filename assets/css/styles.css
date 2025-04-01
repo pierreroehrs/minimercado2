@@ -18,7 +18,7 @@ nav .nav-link:hover {
 }
 
 #menu-lateral {
-    background-color: #f7f7f7; /* Cor de fundo cinza claro */
-    border: 1px solid #ddd;    /* Borda leve */
-    border-radius: 10px;       /* Bordas arredondadas */
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
