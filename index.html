@@ -1,69 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimercado Castro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <img src="logo.png" alt="Minimercado Castro" height="100"/>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="alimentos_nao_pereciveis.html">Alimentos não perecíveis</a></li>
-                <li><a href="frutas_e_verduras.html">Frutas e verduras</a></li>
-                <li><a href="higiene_e_limpeza.html">Higiene e limpeza</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-            </ul>
-        </nav>
+
+    <!-- Header com logo -->
+    <header class="bg-white py-3 border-bottom shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html">
+                <h1 class="m-0">
+                    <img src="assets\img\logo.png" alt="Minimercado Castro" height="100" />
+                </h1>
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-dark fw-bold">Início</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link text-dark fw-bold">Cadastre-se</a></li>
+                    <li class="nav-item"><a href="carrinho.html" class="nav-link text-dark fw-bold">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Mais procurados</h2>
-
-            <ul>
-                <li>
-                    <article>
-                        <p><a href="alimentos_nao_pereciveis.html#arroz_branco_silva_1kg">Arroz branco Silva 1kg</a></p>
-                        <p>R$ 6,98</p>
-                        <img src="alimentos_nao_pereciveis/arroz.png" width=150 alt="Arroz Branco Silva 1kg">
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <p><a href="frutas_e_verduras.html#abacaxi_inteiro_unidade">Abacaxi Inteiro unidade</a></p>
-                        <p>R$ 10,90</p>
-                        <img src="frutas_e_verduras/abacaxi.png" width=150  alt="Abacaxi inteiro unidade">
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <p><a href="alimentos_nao_pereciveis.html#feijao_preto_comiu_1kg">Feijão preto Comiu 1kg</a></p>
-                        <p>R$ 8,68</p>
-                        <img src="alimentos_nao_pereciveis/feijao.png" width=150  alt="Feijão preto Comiu 1kg">
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <p><a href="higiene_e_limpeza.html#alvejante_liquido_clarao_2l">Alvejante líquido Clarão 2L</a></p>
-                        <p>R$ 28,90</p>
-                        <img src="higiene_e_limpeza/alvejante.png" width=150 alt="Alvejante líquido Clarão 2L">
-                    </article>
-                </li>
+    <!-- Menu de Categorias -->
+    <nav id="menu" class="py-1">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item"><a href="alimentos_nao_pereciveis.html"
+                        class="nav-link text-white fw-bold">Alimentos não perecíveis</a></li>
+                <li class="nav-item"><a href="frutas_e_verduras.html" class="nav-link text-white fw-bold">Frutas e
+                        verduras</a></li>
+                <li class="nav-item"><a href="higiene_e_limpeza.html" class="nav-link text-white fw-bold">Higiene e
+                        limpeza</a></li>
             </ul>
-        </section>
+        </div>
+    </nav>
 
+    <!-- Carrossel de Banners -->
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Banner 1 -->
+            <div class="carousel-item active">
+                <img src="assets\img\banners\banner1.png" class="d-block w-100" alt="Até 40% de desconto entre 2 e 8 de março">
+            </div>
+            <!-- Banner 2 -->
+            <div class="carousel-item">
+                <img src="assets\img\banners\banner2.png" class="d-block w-100" alt="Entrega rápida garantida">
+            </div>
+        </div>
+        <!-- Controles de Navegação -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev"
+            aria-label="Slide anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next"
+            aria-label="Próximo slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <main>
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Mais procurados</h2>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="assets\img\produtos\arroz.png" class="card-img-top" alt="Arroz Branco Silva 1kg">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Arroz branco Silva 1kg</h5>
+                            <p class="card-text">R$ 6,98</p>
+                            <button class="btn btn-outline-danger btn-carrinho"
+                                onclick="adicionarAoCarrinho('Arroz branco Silva 1kg', 6.98, 'alimentos_nao_pereciveis/arroz.png')">
+                                <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="assets\img\produtos\abacaxi.png" class="card-img-top" alt="Abacaxi inteiro unidade">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Abacaxi Inteiro unidade</h5>
+                            <p class="card-text">R$ 10,90</p>
+                            <button class="btn btn-outline-danger btn-carrinho"
+                                onclick="adicionarAoCarrinho('Abacaxi Inteiro unidade', 10.9, 'frutas_e_verduras/abacaxi.png')">
+                                <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="assets\img\produtos\feijao.png" class="card-img-top"
+                            alt="Feijão preto Comiu 1kg">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Feijão preto Comiu 1kg</h5>
+                            <p class="card-text">R$ 8,68</p>
+                            <button class="btn btn-outline-danger btn-carrinho"
+                                onclick="adicionarAoCarrinho('Feijão preto Comiu 1kg', 8.68, 'alimentos_nao_pereciveis/feijao.png')">
+                                <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="assets\img\produtos\alvejante.png" class="card-img-top"
+                            alt="Alvejante líquido Clarão 2L">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Alvejante líquido Clarão 2L</h5>
+                            <p class="card-text">R$ 28,90</p>
+                            <button class="btn btn-outline-danger btn-carrinho"
+                                onclick="adicionarAoCarrinho('Alvejante líquido Clarão 2L', 28.90, 'higiene_e_limpeza/alvejante.png')">
+                                <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2025 Todos os direitos reservados para Minimercado Castro</p>
-        <address>
-            <p>Telefone: (51) 3333-4444</p>
-            <p>E-mail: <a href="mailto:contato@castro.com.br?subject=Dúvida do site">contato@castro.com.br</a></p>
-        </address>
+    <footer class="bg-light py-4 border-top shadow-sm">
+        <div class="container text-center">
+            <address>
+                <p>Telefone: (51) 3333-4444</p>
+                <p>E-mail: <a href="mailto:contato@castro.com.br?subject=Dúvida do site" class="text-danger"
+                        target="_blank">contato@castro.com.br</a></p>
+            </address>
+            <p>© 2025 Todos os direitos reservados para Minimercado Castro</p>
+            <p>Desenvolvido por <a href="mailto:pierre.roehrs@gmail.com">Pierre Roehrs</a></p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="assets\js\carrinho.js"></script>
 </body>
+
 </html>

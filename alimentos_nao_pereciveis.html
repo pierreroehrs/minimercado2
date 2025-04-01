@@ -1,54 +1,91 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimercado Castro</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alimentos não perecíveis - Minimercado Castro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <img src="logo.png" alt="Minimercado Castro" height="100"/>
-        </a>
-       <nav>
-            <ul>
-                <li><a href="alimentos_nao_pereciveis.html">Alimentos não perecíveis</a></li>
-                <li><a href="frutas_e_verduras.html">Frutas e verduras</a></li>
-                <li><a href="higiene_e_limpeza.html">Higiene e limpeza</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-            </ul>
-        </nav>
+    <header class="bg-white py-3 border-bottom shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html">
+                <h1 class="m-0">
+                    <img alt="Minimercado Castro" height="100" src="assets\img\logo.png" />
+                </h1>
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link text-dark fw-bold">Cadastre-se</a></li>
+                    <li class="nav-item"><a href="carrinho.html" class="nav-link text-dark fw-bold">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <main>
-        <section>
-            <h2>Alimentos não perecíveis</h2>
-            <ul>
-                <li>
-                    <article id="arroz_branco_silva_1kg">
-                        <p>Arroz branco Silva 1kg</p>
-                        <p>R$ 6,98</p>
-                        <img src="alimentos_nao_pereciveis/arroz.png" width=200 alt="Arroz branco Silva 1kg">
-                    </article>
-                </li>
-                <li>
-                    <article id="feijao_preto_comiu_1kg">
-                        <p>Feijão preto Comiu 1kg</p>
-                        <p>R$ 8,68</p>
-                        <img src="alimentos_nao_pereciveis/feijao.png" width=200  alt="Feijão preto Comiu 1kg">
-                    </article>
-                </li>
+    <nav class="py-1" id="menu">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white fw-bold"
+                        href="alimentos_nao_pereciveis.html">Alimentos não perecíveis</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="frutas_e_verduras.html">Frutas e
+                        verduras</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="higiene_e_limpeza.html">Higiene e
+                        limpeza</a></li>
             </ul>
-        </section>
-
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Alimentos não perecíveis</h2>
+        <div class="row">
+            <!-- Produto 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Arroz Branco Silva 1kg" class="card-img-top" src="assets\img\produtos\arroz.png" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Arroz Branco Silva 1kg</h5>
+                        <p class="card-text">R$ 6,98</p>
+                        <button class="btn btn-outline-danger btn-carrinho"
+                            onclick="adicionarAoCarrinho('Arroz Branco Silva 1kg', 6.98, 'assets\img\produtos\arroz.png')">
+                            <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Produto 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Feijão Preto Kicaldo 1kg" class="card-img-top"
+                        src="assets\img\produtos\feijao.png" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Feijão Preto Kicaldo 1kg</h5>
+                        <p class="card-text">R$ 7,49</p>
+                        <button class="btn btn-outline-danger btn-carrinho"
+                            onclick="adicionarAoCarrinho('Feijão Preto Kicaldo 1kg', 7.49, 'assets\img\produtos\feijao.png')">
+                            <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <p>© 2025 Todos os direitos reservados para Minimercado Castro</p>
-        <address>
-            <p>Telefone: (51) 3333-4444</p>
-            <p>E-mail: <a href="mailto:contato@castro.com.br?subject=Dúvida do site">contato@castro.com.br</a></p>
-        </address>
+    <footer class="bg-light py-4 border-top shadow-sm">
+        <div class="container text-center">
+            <address>
+                <p>Telefone: (51) 3333-4444</p>
+                <p>E-mail: <a class="text-danger" href="mailto:contato@castro.com.br">contato@castro.com.br</a></p>
+            </address>
+            <p>© 2025 Todos os direitos reservados para Minimercado Castro</p>
+            <p>Desenvolvido por <a href="mailto:pierre.roehrs@gmail.com">Pierre Roehrs</a></p>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets\js\carrinho.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,24 @@
+:root {
+    --cor-vermelho: #D32F2F;
+    --cor-laranja: #FF8C42;
+    --cor-fundo-claro: #dddddd;
+    --cor-texto-escuro: #333333;
+}
+
+header .nav-link:hover {
+    color: var(--cor-laranja) !important;
+}
+
+#menu {
+    background-color: var(--cor-laranja);
+}
+
+nav .nav-link:hover {
+    color: var(--cor-vermelho) !important;
+}
+
+#menu-lateral {
+    background-color: #f7f7f7; /* Cor de fundo cinza claro */
+    border: 1px solid #ddd;    /* Borda leve */
+    border-radius: 10px;       /* Bordas arredondadas */
+}
